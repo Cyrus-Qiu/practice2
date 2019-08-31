@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+	<head>
+		<meta charset="utf-8">
+		<title>图片层叠</title>
+
+		<link rel="stylesheet" href="../css/q.css">
+		<link rel="stylesheet" href="../css/w.css">
+
+		<script src="../js/new_file.js"></script>
+
+	</head>
+
+	<body>
+
+		<div class="diepic">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<a href="#"><img src="../img/1.png" width="200" height="400" alt=""></a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#"><img src="../img/2.png" width="200" height="400" alt=""></a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#"><img src="../img/3.png" width="200" height="400" alt=""></a>>
+					</div>
+					<div class="swiper-slide">
+						<a href="#"><img src="../img/4.png" width="200" height="400" alt=""></a>
+					</div>
+					<div class="swiper-slide">
+						<a href="#"><img src="../img/5.png" width="200" height="400" alt=""></a>
+					</div>
+				</div>
+			</div>
+			<!--<div class="swiper-pagination"></div>-->
+			<div class="swiper-button-prev"></div>
+			<div class="swiper-button-next"></div>
+		</div>
+		<script src="../js/jquery-2.1.0.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			certifySwiper = new Swiper('.diepic .swiper-container', {
+				watchSlidesProgress: true,
+				slidesPerView: 'auto',
+				centeredSlides: true,
+				loop: true,
+				loopedSlides: 5,
+				autoplay: 3000,
+				prevButton: '.swiper-button-prev',
+				nextButton: '.swiper-button-next',
+				pagination: '.swiper-pagination',
+				paginationClickable: true,
+				slideToClickedSlide: true,
+				onProgress: function(swiper, progress) {
+					for(i = 0; i < swiper.slides.length; i++) {
+						var slide = swiper.slides.eq(i);
+						var slideProgress = swiper.slides[i].progress;
+						modify = 1;
+						if(Math.abs(slideProgress) > 1) {
+							modify = (Math.abs(slideProgress) - 1) * 0.3 + 1;
+						}
+						translate = slideProgress * modify * 201 + 'px';
+						scale = 1 - Math.abs(slideProgress) / 3;
+						zIndex = 999 - Math.abs(Math.round(10 * slideProgress));
+						slide.transform('translateX(' + translate + ') scale(' + scale + ')');
+						slide.css('zIndex', zIndex);
+						slide.css('opacity', 1);
+						if(Math.abs(slideProgress) > 3) {
+							slide.css('opacity', 0);
+						}
+					}
+				},
+				onSetTransition: function(swiper, transition) {
+					for(var i = 0; i < swiper.slides.length; i++) {
+						var slide = swiper.slides.eq(i)
+						slide.transition(transition);
+					}
+
+				},
+				//处理分页器bug
+				onSlideChangeStart: function(swiper) {
+					if(swiper.activeIndex == 4) {
+						swiper.bullets.eq(9).addClass('swiper-pagination-bullet-active');
+						console.log(swiper.bullets.length);
+					}
+				}
+			});
+		</script>
+
+	</body>
+
+</html>
