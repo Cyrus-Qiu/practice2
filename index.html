@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<title>习惯先生</title>
+		<title>习惯先生 - 习惯跟踪器和时间表</title>
 		<link rel="stylesheet" type="text/css" href="css/one.css" />
 		<link rel="stylesheet" type="text/css" href="css/swiper.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
@@ -92,8 +92,90 @@
 			<a class="gd1"><img src="img/facebook.png" /></a>
 			<a class="gd1"><img src="img/推特gd.png" /></a>
 			<a class="gd1"><img src="img/vk.png" /></a>
-			<a class="gd1"><img src="img/加.png" /></a>
+			<a class="gd1 toLogin"><img src="img/加.png" /></a>
 		</div>
+		<div id="modal">
+			
+		</div>
+		<div class="login-box">
+				<span class="toClose">×</span>
+				<h1>分享</h1>
+				<h3>习惯先生 - 习惯跟踪器和时间表</h3>
+				<p>http://mrhabit.com/</p>
+				<form action="">
+					<input type="search" name="search" id="search">
+				</form>
+				<h3>顶级服务</h3>
+				<div class="box-modal">
+					<div class="thumbnail pull-left">
+					<img src="img/qq.png">
+					<div class="caption">
+						<h3>腾讯QQ</h3>
+					</div>
+				</div>
+				<div class="thumbnail pull-left">
+					<img src="img/vk.png">
+					<div class="caption">
+						<h3>VKontakte</h3>
+					</div>
+				</div>
+				<div class="thumbnail pull-left">
+					<img src="img/推特.png">
+					<div class="caption">
+						<h3>推特</h3>
+					</div>
+				</div>
+				<div class="thumbnail pull-left">
+					<img src="img/脸书.png">
+					<div class="caption">
+						<h3>脸书</h3>
+					</div>
+				</div>
+				<div class="thumbnail pull-left">
+					<img src="img/打印.png">
+					<div class="caption">
+						<h3>打印</h3>
+					</div>
+				</div>
+				<div class="clearfix">
+
+				</div>
+				<div class="thumbnail pull-left">
+					<img src="img/电子邮件.png">
+					<div class="caption">
+						<h3>电子邮件</h3>
+					</div>
+				</div>
+				<div class="thumbnail pull-left">
+					<img src="img/Pinterest.png">
+					<div class="caption">
+						<h3>Pinterest</h3>
+					</div>
+				</div>
+				<div class="thumbnail pull-left">
+					<img src="img/gmail.png">
+					<div class="caption">
+						<h3>Gamil</h3>
+					</div>
+				</div>
+				<div class="thumbnail pull-left">
+					<img src="img/linkedin.png">
+					<div class="caption">
+						<h3>linkedin</h3>
+					</div>
+				</div>
+				<div class="thumbnail pull-left">
+					<img src="img/电邮.png">
+					<div class="caption">
+						<h3>电邮应用</h3>
+					</div>
+				</div>
+				<div class="clearfix">
+
+				</div>
+				</div>
+				
+			</div>
 		<main>
 			<div class="body1">
 				<div class="container">
@@ -271,10 +353,10 @@
 					<div><iframe src="img/line-break-white.svg" width="" height=""></iframe></div>
 					<div class="col-md-6 col-xs-12 q-left ">
 						<div class="btn-1 col-md-6 col-xs-12">
-							<a href="#"><img src="img/苹果.png" /><span>在&nbsp;Apple&nbsp;Store免费</span></a>
+							<a href=""><img src="img/苹果.png" /><span>在&nbsp;Apple&nbsp;Store免费</span></a>
 						</div>
 						<div class="btn-2 col-md-6 col-xs-12">
-							<a href="#"><img src="img/苹果.png" /><span>Apple&nbsp;Store上的PRO</span></a>
+							<a href=""><img src="img/苹果.png" /><span>Apple&nbsp;Store上的PRO</span></a>
 						</div>
 					</div>
 					<div class="col-md-6 col-xs-12 tp-right">
@@ -294,11 +376,11 @@
 								<div class="input-group">
 									<span id="dzyj">电子邮件</span>
 									<input type="email" id="" class="form-control" required placeholder="">
-									<input type="image" src="img/纸飞机.png" id="anniu" name="" value=""/>
+									<input type="image" src="img/纸飞机.png" id="anniu" name="" value="" />
 									<!--<div class="zfj">
 										<img src="img/纸飞机.png" />
 									</div>-->
-									
+
 									<!--<span class="input-group-btn">
         								<button class="btn btn-default" type="button"></button>
       								</span>-->
@@ -316,16 +398,19 @@
 						<h3>往来</h3>
 						<iframe src="img/line-break-18.svg" width="" height=""></iframe>
 						<div class="shuru">
+							<span id="dy">电邮*</span>
 							<img src="img/emi纸飞机.png" style="width: 2rem;height:2rem;" />
-							<input type="email" id="" value="" required placeholder="电邮*" />
+							<input type="email" id="dy1" value="" required />
 						</div>
 						<div class="shuru">
+							<span id="xk">学科*</span>
 							<img src="img/学科.png" style="width: 2rem;height:2rem;" />
-							<input type="text" id="" value="" required placeholder="学科*" />
+							<input type="text" id="xk1" value="" required />
 						</div>
 						<div class="shuru">
+							<span id="yx">信息*</span>
 							<img src="img/邮箱.png" style="width: 2rem;height:2rem;" />
-							<input type="text" id="" value="" required placeholder="信息*" />
+							<input type="text" id="yx1" value="" required />
 						</div>
 						<div class="tijiao">
 							<input type="submit" id="" value="发送" />
@@ -355,60 +440,9 @@
 		<script src="js/swiper.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/new_file.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/my.js" type="text/javascript" charset="utf-8"></script>
 		<script type="text/javascript">
-			//			$(function() {
-			//				$(".height").height($(window).height());
-			//			});
-			var swiper = new Swiper('.swiper-container', {
-				pagination: '.swiper-pagination',
-				paginationClickable: true,
-				spaceBetween: 20,
-				observer: true,
-				observeParents: true
-			});
-
-			var swiper = new Swiper('#swiper', {
-				autoplay: 3000,
-				speed: 1000,
-				autoplayDisableOnInteraction: false,
-				loop: true,
-				centeredSlides: true,
-				slidesPerView: 2,
-				paginationClickable: true,
-				prevButton: '.swiper-button-prev',
-				nextButton: '.swiper-button-next',
-				onInit: function(swiper) {
-					swiper.slides[2].className = "swiper-slide swiper-slide-active"; //第一次打开不要动画
-				},
-				breakpoints: {
-					668: {
-						slidesPerView: 1,
-					}
-				}
-			});
-			$(function() {
-				$("#dzyj").click(function() {
-					$(this).animate({
-						'top': '-80%',
-						'color': '#fff',
-						'font-size': '1.3rem',
-					}, 300);
-				})
-			})
-			//			$(document).ready(function() {
-			//				$(".form-control").focus(function() {
-			//					$("#dzyj").css("color":"#FFF","top":"-10rem");
-			//				});
-			//				$(".form-control").blur(function() {
-			//					$("#dzyj").css("color", "000");
-			//				});
-			//			});
-			$('.bd').click(function() {
-				$('html, body').animate({
-					scrollTop: $($.attr(this, 'href')).offset().top
-				}, 500);
-				return false;
-			});		
+			
 		</script>
 	</body>
 
