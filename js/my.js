@@ -127,3 +127,12 @@ $(function() {
 		$(".login-box").fadeOut(500);
 	})
 })
+
+$(function(){
+	$(".menb").click(function() {
+		$("#bs-example-navbar-collapse-2").toggle(300);
+	})
+	$(".mena").click(function(){
+		$("#bs-example-navbar-collapse-2").toggle(0);
+	})
+})
