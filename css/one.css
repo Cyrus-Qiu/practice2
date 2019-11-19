@@ -2,6 +2,66 @@
 	margin: 0;
 	padding: 0;
 }
+.menb{
+	z-index: 998;
+	position: absolute;
+	right: 2rem;
+	top: 2.5rem;
+	width: 26px;
+	height: 26px;
+}
+.mena{
+	z-index: 998;
+	position: absolute;
+	right: 2rem;
+	top: 2.5rem;
+	width: 26px;
+	height: 26px;
+}
+@media only screen and (min-width: 768px){
+	#bs-example-navbar-collapse-2{
+		display: none!important;
+	}
+}
+@media only screen and (max-width: 768px) {
+	#bs-example-navbar-collapse-2 {	
+		display: none;
+		position: fixed;
+		width:300px;
+		max-width: 80vw;
+		height: 100vh;
+		background: #252525;
+		z-index: 998;
+		text-align: center;
+	}
+	#bs-example-navbar-collapse-2 img {
+		width: 10rem;
+		margin: 3rem auto;
+	}
+	#bs-example-navbar-collapse-2 a .xys {
+		color: #fff;
+		display: block;
+	}
+	#bs-example-navbar-collapse-2 .nav1 {
+		margin: 0 auto;
+	}
+	#bs-example-navbar-collapse-2 ul li {
+		width: 80%;
+		height: 3rem;
+		text-align: left;
+		margin: 3rem;
+		margin-left: 50px;
+	}
+	#bs-example-navbar-collapse-2 ul li a {
+		color: #fff;
+		font-size: 1.5rem;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	#bs-example-navbar-collapse-2 ul li a.active {
+		background-color: rgba(214, 214, 214, 0.3);
+	}
+}
 
 html,
 body {
@@ -59,6 +119,9 @@ header .navbar-header>a>span {
 @media only screen and (min-width: 768px) {
 	header #bs-example-navbar-collapse-1 {
 		padding: 20px 0;
+	}
+	header #bs-example-navbar-collapse-1 .navbar-right{
+		margin-right: 10px;
 	}
 }
 
@@ -422,7 +485,7 @@ iframe {
 	z-index: 1;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 768px) {
 	.body4 .tp-right img {
 		display: none;
 	}
@@ -437,7 +500,7 @@ iframe {
 
 .body5 h3 {
 	color: #fff;
-	font-size: 3rem;
+	font-size: 4rem;
 }
 
 .body5 .b5left {
@@ -451,7 +514,6 @@ iframe {
 .body5 .navbar-form {
 	border-bottom: none;
 	box-shadow: none;
-	margin-left: 5%;
 }
 
 .body5 #dzyj {
@@ -469,77 +531,10 @@ iframe {
 }
 
 .body5 .input-group .form-control:not(:first-child):not(:last-child) {
-	width: 60vw;
 	border-top-left-radius: 30px;
 	border-bottom-left-radius: 30px;
 }
-@media only screen and (min-width: 992px) {
-	.body5 .input-group .form-control:not(:first-child):not(:last-child) {
-		width: 30vw;
-		border-top-left-radius: 30px;
-		border-bottom-left-radius: 30px;
-	}
-	.body5 .navbar-form {
-		border-bottom: none;
-		box-shadow: none;
-		position: relative;
-		
-	}
-}
-@media only screen and (max-width: 991px) all  (min-width: 768px) {
-	.body5 .input-group .form-control:not(:first-child):not(:last-child) {
-		width: 70vw;
-		border-top-left-radius: 30px;
-		border-bottom-left-radius: 30px;
-	}
-	.body5 .navbar-form {
-		border-bottom: none;
-		box-shadow: none;
-		position: relative;
-		
-	}
-}
-@media only screen and (min-width: 414px) all (max-width: 768px){
-	.body5 .input-group .form-control:not(:first-child):not(:last-child) {
-		width: 60vw;
-		border-top-left-radius: 30px;
-		border-bottom-left-radius: 30px;
-	}
-	.body5 .navbar-form {
-		border-bottom: none;
-		box-shadow: none;
-		margin-left: 5vw;
-	}
-}
-@media only screen and (max-width: 414px) {
-	.body5 .input-group .form-control:not(:first-child):not(:last-child) {
-		width: 60vw;
-		border-top-left-radius: 30px;
-		border-bottom-left-radius: 30px;
-	}
-	.body5 .navbar-form {
-		border-bottom: none;
-		box-shadow: none;
-		position: relative;
-		left: 0;
-		margin-left: 0;
-	}
-}
-@media only screen and (max-width: 320px) {
-	.body5 .input-group .form-control:not(:first-child):not(:last-child) {
-		width: 50vw;
-		height: 5rem;
-		border-top-left-radius: 30px;
-		border-bottom-left-radius: 30px;
-	}
-	.body5 .navbar-form {
-		border-bottom: none;
-		box-shadow: none;
-		position: relative;
-		left: 0;
-		margin-left: 0;
-	}
-}
+
 .body5 input[type=email] {
 	height: 5rem;
 }
@@ -596,18 +591,14 @@ iframe {
 	}
 }
 
-@media only screen and (min-width: 1557px) {
-	.body5 .navbar-form .input-group .form-control {
-		width: 30vw;
-	}
-}
-
 @media only screen and (max-width: 768px) {
 	.body5 .navbar-form .input-group .form-control {
 		width: 65vw;
 	}
 }
-
+.navbar-from{
+	padding: 0!important;
+}
 .body6 {
 	padding-top: 5rem;
 	background: url(../img/concrete_wall.png);
@@ -634,9 +625,9 @@ iframe {
 
 .body6 input[type="text"],
 input[type="email"] {
-	/*margin-left: 1rem;
-	padding: 2rem 0;*/
-	width: 50vw;
+	margin-left: 1rem;
+	padding: 2rem 0;
+	width: 60vw;
 	border: none;
 	border-bottom: 1px solid #000000;
 	outline: none;
